@@ -20,6 +20,7 @@ def send_message_by_chat_id(id, message):
 
 def main():
     message = sys.argv[1] if len(sys.argv) > 1 else "test message"
+    bot.config['api_key'] = BOT_TOKEN
     print(send_message_by_chat_id(CHAT_ID, message))
 
 
