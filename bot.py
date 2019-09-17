@@ -8,7 +8,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 
 def send_message_by_channel_name(message):
-    result = bot.send_message(chat_id=CHAT_ID, text=message)
+    result = bot.send_message(CHANNEL_NAME, message)
     time.sleep(1)
     return result
 
