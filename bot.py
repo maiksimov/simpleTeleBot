@@ -1,8 +1,7 @@
 from misc import *
 import telebot
 import time
-
-URL = 'https://api.telegram.org/bot' + BOT_TOKEN + '/'
+import sys
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -20,7 +19,8 @@ def send_message_by_chat_id(id, message):
 
 
 def main():
-    print(send_message_by_chat_id(CHAT_ID, 'test Message from local'))
+    message = sys.argv[1] if len(sys.argv) > 1 else "test message"
+    print(send_message_by_chat_id(CHAT_ID, message))
 
 
 if __name__ == '__main__':
